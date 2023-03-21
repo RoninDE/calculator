@@ -1,13 +1,11 @@
+let expression = document.getElementById('result');
 function clearDisplay() {
-    let expression = document.getElementById('result');
     expression.value = '';
 }
 function display(value) {
-    let expression = document.getElementById('result');
     expression.value += value;
 }
 function changeSign() {
-    let expression = document.getElementById('result');
     let str = expression.value
     // alert(Number(str));
     // alert(str)
@@ -43,7 +41,6 @@ function changeSign() {
     document.getElementById("result").value = newstr;        
 }
 function calculate() {
-    let expression = document.getElementById("result");
     let str = expression.value;
     for (let pos = 0; pos < str.length; pos++) {
         if (str.charAt(pos)== '%') str = str.slice(0,pos) + '/100' + str.slice(pos+1);
