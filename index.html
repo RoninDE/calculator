@@ -19,28 +19,28 @@
           <td><button class="op" type="button" value="AC" onclick="clearDisplay()">AC</button></td>
           <td><button class="op" type="button" value="+/-" onclick="changeSign()">+/-</button></td>
           <td><button class="op" type="button" value="%" onclick="percentage()">%</button></td>
-          <td><button class="arithm" type="button" value="/" onclick="action(' / ')">/</button></td>
+          <td><button class="arithm" type="button" value="/" onclick="action('/')">/</button></td>
         </tr>
         <tr>
-          <td><button class="number" type="button" value="7" onclick="display('7')">7</button></td>
-          <td><button class="number" type="button" value="8" onclick="display('8')">8</button></td>
-          <td><button class="number" type="button" value="9" onclick="display('9')">9</button></td>
-          <td><button class="arithm" type="button" value="*" onclick="action(' * ')">*</button></td>
+          <td><button class="number" type="button" value="7" onclick="addDigit('7')">7</button></td>
+          <td><button class="number" type="button" value="8" onclick="addDigit('8')">8</button></td>
+          <td><button class="number" type="button" value="9" onclick="addDigit('9')">9</button></td>
+          <td><button class="arithm" type="button" value="*" onclick="action('*')">*</button></td>
         </tr>
         <tr>
-          <td><button class="number" type="button" value="4" onclick="display('4')">4</button></td>
-          <td><button class="number" type="button" value="5" onclick="display('5')">5</button></td>
-          <td><button class="number" type="button" value="6" onclick="display('6')">6</button></td>
-          <td><button class="arithm" type="button" value="-" onclick="action(' - ')">-</button></td>
+          <td><button class="number" type="button" value="4" onclick="addDigit('4')">4</button></td>
+          <td><button class="number" type="button" value="5" onclick="addDigit('5')">5</button></td>
+          <td><button class="number" type="button" value="6" onclick="addDigit('6')">6</button></td>
+          <td><button class="arithm" type="button" value="-" onclick="action('-')">-</button></td>
         </tr>
         <tr>
-          <td><button class="number" type="button" value="1" onclick="display('1')">1</button></td>
-          <td><button class="number" type="button" value="2" onclick="display('2')">2</button></td>
-          <td><button class="number" type="button" value="3" onclick="display('3')">3</button></td>
-          <td><button class="arithm" type="button" value="+" onclick="action(' + ')">+</button></td>
+          <td><button class="number" type="button" value="1" onclick="addDigit('1')">1</button></td>
+          <td><button class="number" type="button" value="2" onclick="addDigit('2')">2</button></td>
+          <td><button class="number" type="button" value="3" onclick="addDigit('3')">3</button></td>
+          <td><button class="arithm" type="button" value="+" onclick="action('+')">+</button></td>
         </tr>
         <tr>
-          <td colspan="3"><button class="number" type="button" value="0" onclick="display('0')">0</td>
+          <td colspan="3"><button class="number" type="button" value="0" onclick="addDigit('0')">0</td>
             <td><button class="arithm" type="button" value="=" onclick="calculate()">=</td>
             </tr>
           </table>

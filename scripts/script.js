@@ -6,10 +6,10 @@ let currentNum = null;
 let newNum = null;
 
 const operations = {
-    ' + ': (a, b) => a + b,
-    ' - ': (a, b) => a - b,
-    ' * ': (a, b) => a * b,
-    ' / ': (a, b) => a / b
+    '+': (a, b) => a + b,
+    '-': (a, b) => a - b,
+    '*': (a, b) => a * b,
+    '/': (a, b) => a / b
 }
 
 function clearDisplay() {
@@ -22,42 +22,48 @@ function updateInput() {
     input.value = currentNum;
 }
 
+function updateResult() {
+    result.value = expression.join(' ');
+}
+
 function addToExpression(x) {
-    expression.push(x);
-    result.value = expression.join('');
+    expression.push(x);    
 }
 
-function changeLastNum() {
-    while (+expression[expression.length-1]) expression.pop();
+function updateLastNum() {
     addToExpression(input.value);
+    updateResult();
 }
 
-function display(digit) {
+function addDigit(digit) {
     currentNum = +(input.value.toString() + digit.toString());
-    addToExpression(digit);
+    
     updateInput();
 }
 
 function action(operation) {
+    addToExpression(currentNum);
     newNum = currentNum;
     currentAction = operation;
     currentNum = null;
     updateInput();
     addToExpression(operation);
+    updateResult();
 }
 
 function percentage() {
     currentNum = currentNum/100;
     updateInput();
-    changeLastNum();
 }
 
 function changeSign() {
     currentNum = -(currentNum);
     updateInput();
-    changeLastNum();
 }
+
 function calculate() {
+    addToExpression(currentNum);
+    updateResult();
     currentNum = operations[currentAction](newNum, currentNum);
     updateInput();
 }
